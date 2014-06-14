@@ -1,4 +1,4 @@
-package com.self.service.util.log;
+package com.self.service.util.common;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
