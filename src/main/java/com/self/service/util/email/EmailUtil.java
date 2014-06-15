@@ -30,7 +30,7 @@ public class EmailUtil {
 	
 	
 	
-	private final String CLASS_LOCATION="com.self.service.util.email.EmailUtility";
+	private final String CLASS_LOCATION="com.self.service.util.email.EmailUtil";
 	
 	public EmailUtil() throws IOException, ClassNotFoundException, IllegalAccessException{
 		initProperties();
