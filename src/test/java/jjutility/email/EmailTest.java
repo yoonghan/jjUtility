@@ -1,4 +1,4 @@
-package jjutility;
+package jjutility.email;
 
 import org.junit.Test;
 

@@ -1,9 +1,7 @@
 package com.self.service.util.email;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Properties;
 
 import javax.mail.Authenticator;
 import javax.mail.Message;
@@ -18,60 +16,21 @@ import com.self.service.util.impl.PropertyFiles;
 
 public class EmailUtil {
 	private final String PROPERTY_FILENAME=PropertyFiles.EMAIL_PROP;
-	private final Properties properties  = new Properties();
-	private String toUser;
-	private String fromUser;
-	private String subject;
-	private String username;
-	private String password;
-	private SimpleDateFormat sdf;
-	
-	private final String DEFAULT_DATE_FORMAT = "dd-MMM-yyyy";
-	
-	
-	
-	private final String CLASS_LOCATION="com.self.service.util.email.EmailUtil";
+	final EmailPropBean EMAILBEAN = new EmailPropBean();
 	
 	public EmailUtil() throws IOException, ClassNotFoundException, IllegalAccessException{
 		initProperties();
 	}
 	
 	private void initProperties() throws IOException, ClassNotFoundException, IllegalAccessException{
-		new PropertyLoaderUtil().loadProperty(properties, CLASS_LOCATION, PROPERTY_FILENAME);
-		loadValues();
-	}
-	
-	private void loadValues() throws IllegalAccessException{
-		
-		toUser = properties.getProperty(PropertyFiles.TO_USER);
-		if(toUser == null || toUser.isEmpty()){
-			throw new IllegalAccessException(String.format("Define %s:",PropertyFiles.TO_USER)); 
-		}
-		fromUser = properties.getProperty(PropertyFiles.FROM_USER);
-		if(fromUser == null || fromUser.isEmpty()){
-			throw new IllegalAccessException(String.format("Define %s:",PropertyFiles.FROM_USER));
-		}
-		subject = properties.getProperty(PropertyFiles.SUBJECT);
-		if(subject == null || subject.isEmpty()){
-			throw new IllegalAccessException(String.format("Define %s:",PropertyFiles.SUBJECT));
-		}
-		username = properties.getProperty(PropertyFiles.USER_NAME);
-		if(username == null || username.isEmpty()){
-			throw new IllegalAccessException(String.format("Define %s:",PropertyFiles.USER_NAME));
-		}
-		password = properties.getProperty(PropertyFiles.PASSWORD);
-		if(password == null || password.isEmpty()){
-			throw new IllegalAccessException(String.format("Define %s:",PropertyFiles.PASSWORD));
-		}
-		sdf = new SimpleDateFormat(properties.getProperty(PropertyFiles.DATE_FORMAT, DEFAULT_DATE_FORMAT));
-		
+		new PropertyLoaderUtil().loadProperty(PROPERTY_FILENAME, EMAILBEAN);
 	}
 	
 	/**
 	 * Very simple email sending.
 	 */
 	public void sendEmail(String message){
-		String subjectWithDate = String.format("%s [%s]", subject, sdf.format(new Date()));
+		String subjectWithDate = String.format("%s [%s]", EMAILBEAN.getSubject(), EMAILBEAN.getDateFormat().format(new Date()));
 		sendEmail(subjectWithDate,message);
 	}
 		
@@ -83,28 +42,28 @@ public class EmailUtil {
 	 */
 	public void sendEmail(String subject,String message){
 		
-		if(properties == null){
+		if(EMAILBEAN.getProperty() == null){
 			System.err.println("Nothing to be loaded");
 		}
 		
 		try{
 			Authenticator auth = new Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication(username, password);
+					return new PasswordAuthentication(EMAILBEAN.getUserName(), EMAILBEAN.getPassword());
 				}
 			};
 			
-			Session session = Session.getInstance(properties,auth);
+			Session session = Session.getInstance(EMAILBEAN.getProperty(),auth);
 			
 	         // Create a default MimeMessage object.
 	         MimeMessage mimeMessage = new MimeMessage(session);
 
 	         // Set From: header field of the header.
-	         mimeMessage.setFrom(new InternetAddress(fromUser));
+	         mimeMessage.setFrom(new InternetAddress(EMAILBEAN.getFromUser()));
 
 	         // Set To: header field of the header.
 	         mimeMessage.addRecipient(Message.RecipientType.TO,
-	                                  new InternetAddress(toUser));
+	                                  new InternetAddress(EMAILBEAN.getToUser()));
 
 	         // Set Subject: header field
 	         mimeMessage.setSubject(subject);
