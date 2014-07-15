@@ -17,6 +17,36 @@
 		<version>${mail.version}</version>
 		<scope>provided</scope>
 	</dependency>
+	<dependency>
+		<groupId>com.google.code.gson</groupId>
+		<artifactId>gson</artifactId>
+		<version>${gson.version}</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.google.http-client</groupId>
+		<artifactId>google-http-client</artifactId>
+		<version>${oauth2.version}</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.google.http-client</groupId>
+		<artifactId>google-http-client-jackson2</artifactId>
+		<version>${oauth2.version}</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.google.apis</groupId>
+		<artifactId>google-api-services-oauth2</artifactId>
+		<version>${oauth2.service.version}</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.google.guava</groupId>
+		<artifactId>guava</artifactId>
+		<version>${guava.version}</version>
+		<scope>provided</scope>
+	</dependency>
   </dependencies>
   <build>
     <plugins>

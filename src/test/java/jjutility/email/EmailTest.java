@@ -1,11 +1,13 @@
 package jjutility.email;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.self.service.util.email.EmailUtil;
 
 public class EmailTest {
 
+	@Ignore
 	@Test
 	public void testEmail(){
 		String message = "Hello there";

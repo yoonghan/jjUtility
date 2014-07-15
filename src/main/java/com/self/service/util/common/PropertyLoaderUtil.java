@@ -41,6 +41,10 @@ public class PropertyLoaderUtil{
 		return propertyMapper;
 	}
 	
+	public InputStream fileLoader(final String FILE_NAME)  throws ClassNotFoundException, FileNotFoundException{
+		return loadFile(FILE_NAME);
+	}
+	
 	private InputStream loadFile(final String PROPERTY_FILENAME) throws ClassNotFoundException, FileNotFoundException{
 		
 		InputStream input = Class.forName(

@@ -3,11 +3,14 @@ package jjutility.property;
 import java.io.IOException;
 
 import jjutility.bean.EmailPropertyBean;
+import jjutility.bean.SampleGsonBean;
 import junit.framework.Assert;
 
 import org.junit.Test;
 
+import com.self.service.util.common.CommonProperties;
 import com.self.service.util.common.PropertyLoaderUtil;
+import com.self.service.util.gson.CustomGson;
 import com.self.service.util.impl.PropertyFiles;
 
 public class TestPropertyReader {
@@ -27,5 +30,19 @@ public class TestPropertyReader {
 		System.out.println(propMapper.getFromUserValue()+","+propMapper.getToUserValue());
 		Assert.assertTrue(propMapper.getFromUserValue().isEmpty() == false);
 		Assert.assertTrue(propMapper.getToUserValue().isEmpty() == false);
+	}
+	
+	@Test
+	public void testCommonProperties(){
+		Assert.assertEquals("dd/MM/yyyy hh:mm:ss", CommonProperties.getDateFormat());
+	}
+	
+	@Test
+	public void testGson(){
+		SampleGsonBean sampleGson = new SampleGsonBean();
+		String jsonValue = CustomGson.toGson(sampleGson);
+		
+		SampleGsonBean converted = CustomGson.fromGson(jsonValue, SampleGsonBean.class);
+		Assert.assertEquals(converted.getSampleDate().getTime(), sampleGson.getSampleDate().getTime());
 	}
 }

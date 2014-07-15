@@ -3,6 +3,7 @@ package com.self.service.util.email;
 import java.text.SimpleDateFormat;
 import java.util.Properties;
 
+import com.self.service.util.common.CommonProperties;
 import com.self.service.util.impl.PropertyFiles;
 import com.self.service.util.impl.PropertyMapperImpl;
 
@@ -15,7 +16,7 @@ class EmailPropBean implements PropertyMapperImpl {
 	private String userName;
 	private String password;
 	private SimpleDateFormat dateFormat;
-	private final String DEFAULT_DATE_FORMAT = "dd-MMM-yyyy";
+	private final String DEFAULT_DATE_FORMAT = CommonProperties.getDateFormat();
 	
 	@Override
 	public void map(Properties property) throws IllegalAccessException {
