@@ -17,7 +17,6 @@ public class CustomGson {
 	}
 	
 	public static <T> String toGson(T object){
-		System.out.println(object);
 		return gson.toJson(object);
 	}
 	

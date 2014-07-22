@@ -131,11 +131,11 @@ public class GoogleAuthentication implements IOAuthImpl{
 	}
 	
 	@Override
-	public Optional<GmailUserInfoEntity> convertJsonToObj(String json){
+	public Optional<GoogleUserInfoEntity> convertJsonToObj(String json){
 		if(json == null || json.isEmpty())
 			return Optional.absent();
 		
-		GmailUserInfoEntity googleInfoEntity =  new GmailUserInfoEntity.Builder().setJSON(json).build();
+		GoogleUserInfoEntity googleInfoEntity =  new GoogleUserInfoEntity.Builder().setJSON(json).build();
 		return Optional.fromNullable(googleInfoEntity);
 	}
 	

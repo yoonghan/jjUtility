@@ -2,7 +2,7 @@ package com.self.service.util.authentication.google;
 
 import com.self.service.util.gson.CustomGson;
 
-public class GmailUserInfoEntity {
+public class GoogleUserInfoEntity {
 	
 	private String  id;
 	private String  email;
@@ -13,7 +13,7 @@ public class GmailUserInfoEntity {
 	private String  given_name;
 	private String  picture;
 	
-	public GmailUserInfoEntity(String id, 
+	public GoogleUserInfoEntity(String id, 
 			String email, boolean verified_email, 
 			String name, String family_name, String given_name,
 			String link, String picture){
@@ -121,8 +121,8 @@ public class GmailUserInfoEntity {
 			return this;
 		}
 		
-		public GmailUserInfoEntity build(){
-			return CustomGson.fromGson(jsonString, GmailUserInfoEntity.class);
+		public GoogleUserInfoEntity build(){
+			return CustomGson.fromGson(jsonString, GoogleUserInfoEntity.class);
 		}
 	}
 	
