@@ -1,8 +1,8 @@
-package com.self.service.util.common;
+package com.jaring.jom.util.common;
 
 import java.io.IOException;
 
-import static com.self.service.util.impl.PropertyFiles.*;
+import static com.jaring.jom.util.impl.PropertyFiles.*;
 
 public class CommonProperties {
 	

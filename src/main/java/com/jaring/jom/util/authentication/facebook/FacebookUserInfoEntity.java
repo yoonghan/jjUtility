@@ -1,6 +1,6 @@
-package com.self.service.util.authentication.facebook;
+package com.jaring.jom.util.authentication.facebook;
 
-import com.self.service.util.gson.CustomGson;
+import com.jaring.jom.util.gson.CustomGson;
 
 public class FacebookUserInfoEntity {
 	private String  id;

@@ -1,4 +1,4 @@
-package com.self.service.util.authentication.google;
+package com.jaring.jom.util.authentication.google;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,8 +21,8 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.google.common.base.Optional;
-import com.self.service.util.common.PropertyLoaderUtil;
-import com.self.service.util.impl.IOAuthImpl;
+import com.jaring.jom.util.common.PropertyLoaderUtil;
+import com.jaring.jom.util.impl.IOAuthImpl;
 
 /**
  * Google API for google authentication.

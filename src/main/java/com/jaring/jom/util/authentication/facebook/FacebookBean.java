@@ -1,8 +1,8 @@
-package com.self.service.util.authentication.facebook;
+package com.jaring.jom.util.authentication.facebook;
 
 import java.util.Properties;
 
-import com.self.service.util.impl.PropertyMapperImpl;
+import com.jaring.jom.util.impl.PropertyMapperImpl;
 
 public class FacebookBean implements PropertyMapperImpl{
 

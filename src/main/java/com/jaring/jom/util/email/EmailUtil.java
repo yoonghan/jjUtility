@@ -1,4 +1,4 @@
-package com.self.service.util.email;
+package com.jaring.jom.util.email;
 
 import java.io.IOException;
 import java.util.Date;
@@ -11,8 +11,8 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import com.self.service.util.common.PropertyLoaderUtil;
-import com.self.service.util.impl.PropertyFiles;
+import com.jaring.jom.util.common.PropertyLoaderUtil;
+import com.jaring.jom.util.impl.PropertyFiles;
 
 public class EmailUtil {
 	private final String PROPERTY_FILENAME=PropertyFiles.EMAIL_PROP;

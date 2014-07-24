@@ -1,8 +1,9 @@
-package com.self.service.util.gson;
+package com.jaring.jom.util.gson;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import static com.self.service.util.common.CommonProperties.*;
+
+import static com.jaring.jom.util.common.CommonProperties.*;
 
 public class CustomGson {
 	

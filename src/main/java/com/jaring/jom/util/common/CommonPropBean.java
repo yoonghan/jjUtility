@@ -1,8 +1,8 @@
-package com.self.service.util.common;
+package com.jaring.jom.util.common;
 
-import com.self.service.util.impl.PropertyMapperImpl;
+import com.jaring.jom.util.impl.PropertyMapperImpl;
 
-import static com.self.service.util.impl.PropertyFiles.*;
+import static com.jaring.jom.util.impl.PropertyFiles.*;
 
 public class CommonPropBean implements PropertyMapperImpl{
 

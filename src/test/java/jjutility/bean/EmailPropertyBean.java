@@ -2,7 +2,7 @@ package jjutility.bean;
 
 import java.util.Properties;
 
-import com.self.service.util.impl.PropertyMapperImpl;
+import com.jaring.jom.util.impl.PropertyMapperImpl;
 
 public class EmailPropertyBean implements PropertyMapperImpl{
 

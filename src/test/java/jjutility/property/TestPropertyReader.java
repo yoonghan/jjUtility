@@ -8,10 +8,10 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-import com.self.service.util.common.CommonProperties;
-import com.self.service.util.common.PropertyLoaderUtil;
-import com.self.service.util.gson.CustomGson;
-import com.self.service.util.impl.PropertyFiles;
+import com.jaring.jom.util.common.CommonProperties;
+import com.jaring.jom.util.common.PropertyLoaderUtil;
+import com.jaring.jom.util.gson.CustomGson;
+import com.jaring.jom.util.impl.PropertyFiles;
 
 public class TestPropertyReader {
 

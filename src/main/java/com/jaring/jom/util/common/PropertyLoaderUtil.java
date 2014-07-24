@@ -1,11 +1,11 @@
-package com.self.service.util.common;
+package com.jaring.jom.util.common;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
-import com.self.service.util.impl.PropertyMapperImpl;
+import com.jaring.jom.util.impl.PropertyMapperImpl;
 
 public class PropertyLoaderUtil{
 

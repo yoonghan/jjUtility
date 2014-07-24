@@ -3,7 +3,7 @@ package jjutility.email;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import com.self.service.util.email.EmailUtil;
+import com.jaring.jom.util.email.EmailUtil;
 
 public class EmailTest {
 

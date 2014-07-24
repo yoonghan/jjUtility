@@ -1,11 +1,11 @@
-package com.self.service.util.email;
+package com.jaring.jom.util.email;
 
 import java.text.SimpleDateFormat;
 import java.util.Properties;
 
-import com.self.service.util.common.CommonProperties;
-import com.self.service.util.impl.PropertyFiles;
-import com.self.service.util.impl.PropertyMapperImpl;
+import com.jaring.jom.util.common.CommonProperties;
+import com.jaring.jom.util.impl.PropertyFiles;
+import com.jaring.jom.util.impl.PropertyMapperImpl;
 
 class EmailPropBean implements PropertyMapperImpl {
 

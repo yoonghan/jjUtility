@@ -1,4 +1,4 @@
-package com.self.service.util.impl;
+package com.jaring.jom.util.impl;
 
 public interface PropertyFiles {
 	public final static String EMAIL_PROP="/email.properties";

@@ -1,4 +1,4 @@
-package com.self.service.util.impl;
+package com.jaring.jom.util.impl;
 
 import java.io.IOException;
 

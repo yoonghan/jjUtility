@@ -1,6 +1,6 @@
-package com.self.service.util.authentication.google;
+package com.jaring.jom.util.authentication.google;
 
-import com.self.service.util.gson.CustomGson;
+import com.jaring.jom.util.gson.CustomGson;
 
 public class GoogleUserInfoEntity {
 	
