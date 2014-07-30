@@ -99,6 +99,7 @@ public class GoogleAuthentication implements IOAuthImpl{
 			clientSecrets = GoogleClientSecrets.load(JSON_FACTORY,
 		        new InputStreamReader(inputStream));
 		}catch(Exception error){
+			error.printStackTrace();
 			throw new IllegalAccessException("Unable to detect "+CLIENT_SECRET_FILE);
 		}
 		return clientSecrets;
